@@ -25,9 +25,9 @@ public class Tile extends StaticEntity {
 
     @Override
     public void draw(Buffer buffer) {
-        buffer.drawRectangle(x, y, width, height, bgColor);
+        buffer.drawRectangle(x, y + 38, width, height, bgColor);
         if (onTilePiece != null) {
-            onTilePiece.draw(x ,y, buffer);
+            onTilePiece.draw(x ,y + 38, buffer);
         }
     }
 }

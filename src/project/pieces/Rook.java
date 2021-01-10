@@ -7,15 +7,15 @@ import java.awt.*;
 
 public class Rook extends Piece {
 
-    private static Image whitePiece = GameResources.getInstance().getImage("rook");
-    private static Image blackPiece = GameResources.getInstance().getImage("blackRook");
+    private final static Image whitePiece = GameResources.getInstance().getImage("rook");
+    private final static Image blackPiece = GameResources.getInstance().getImage("blackRook");
 
     public Rook(int color) {
         if (color == 1) {
-            setImage(whitePiece);
+            setImage(whitePiece, color);
             return;
         }
-        setImage(blackPiece);
+        setImage(blackPiece, color);
     }
 
     @Override

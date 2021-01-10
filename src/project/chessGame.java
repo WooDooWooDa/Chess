@@ -2,6 +2,9 @@ package project;
 
 import project.engine.Buffer;
 import project.engine.Game;
+import project.engine.GameTime;
+
+import java.awt.*;
 
 public class chessGame extends Game {
 
@@ -20,6 +23,7 @@ public class chessGame extends Game {
     @Override
     public void draw(Buffer buffer) {
         board.draw(buffer);
+        buffer.drawText(GameTime.getElapsedFormattedTime(), 220,20, Color.WHITE);
     }
 
     @Override

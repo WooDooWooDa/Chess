@@ -8,6 +8,7 @@ import java.awt.*;
 public abstract class Piece extends StaticEntity {
 
     private Image image;
+    private int color;
 
     public Piece() {
         x = 0;
@@ -20,7 +21,8 @@ public abstract class Piece extends StaticEntity {
         buffer.drawImage(image, x + tileX, y + tileY);
     }
 
-    protected void setImage(Image image) {
+    protected void setImage(Image image, int color) {
+        this.color = color;
         this.image = image;
     }
 }

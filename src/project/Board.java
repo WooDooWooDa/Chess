@@ -26,9 +26,9 @@ public class Board {
             for (int j = 0; j < 8; j++) {
                 Color color;
                 if (black) {
-                    color = Color.BLACK;
+                    color = new Color(82, 100, 255);
                 } else {
-                    color = Color.WHITE;
+                    color = new Color(0, 9, 106);
                 }
                 tiles[i][j] = new Tile(i * 64, j * 64, color);
                 black = !black;

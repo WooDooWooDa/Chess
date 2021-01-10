@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 
 public class RenderingEngine {
     public static final int SCREEN_WIDTH = 512;
-    public static final int SCREEN_HEIGHT = 512;
+    public static final int SCREEN_HEIGHT = 552;
     private static RenderingEngine instance;
 
     private Screen screen;
@@ -39,7 +39,7 @@ public class RenderingEngine {
     }
 
     public Buffer getRenderingBuffer() {
-        bufferedImage = new BufferedImage(512, 512, BufferedImage.TYPE_INT_RGB);
+        bufferedImage = new BufferedImage(SCREEN_WIDTH, SCREEN_HEIGHT, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics = bufferedImage.createGraphics();
         graphics.setRenderingHints(getRenderingHints());
         return new Buffer(graphics);
