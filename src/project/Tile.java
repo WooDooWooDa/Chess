@@ -2,6 +2,7 @@ package project;
 
 import project.engine.Buffer;
 import project.engine.entities.StaticEntity;
+import project.pieces.Piece;
 
 import java.awt.*;
 
@@ -18,8 +19,15 @@ public class Tile extends StaticEntity {
         bgColor = color;
     }
 
+    public void setPiece(Piece piece) {
+        onTilePiece = piece;
+    }
+
     @Override
     public void draw(Buffer buffer) {
         buffer.drawRectangle(x, y, width, height, bgColor);
+        if (onTilePiece != null) {
+            onTilePiece.draw(x ,y, buffer);
+        }
     }
 }

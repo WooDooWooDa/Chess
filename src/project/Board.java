@@ -1,6 +1,7 @@
 package project;
 
 import project.engine.Buffer;
+import project.pieces.Rook;
 
 import java.awt.*;
 
@@ -11,6 +12,12 @@ public class Board {
     public Board() {
         tiles = new Tile[8][8];
         initTiles();
+        initPieces();
+    }
+
+    private void initPieces() {
+        tiles[0][0].setPiece(new Rook(0));
+        tiles[7][0].setPiece(new Rook(0));
     }
 
     private void initTiles() {
