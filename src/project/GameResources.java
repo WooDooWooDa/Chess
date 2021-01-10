@@ -33,6 +33,8 @@ public class GameResources {
         try {
             allImages.put("rook", ImageIO.read(this.getClass().getClassLoader().getResourceAsStream("whiteRook.png")));
             allImages.put("blackRook", ImageIO.read(this.getClass().getClassLoader().getResourceAsStream("blackRook.png")));
+            allImages.put("pawn", ImageIO.read(this.getClass().getClassLoader().getResourceAsStream("pawn.png")));
+            allImages.put("blackPawn", ImageIO.read(this.getClass().getClassLoader().getResourceAsStream("blackPawn.png")));
         } catch (IOException e) {
             e.printStackTrace();
         }

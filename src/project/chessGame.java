@@ -23,7 +23,7 @@ public class chessGame extends Game {
     @Override
     public void draw(Buffer buffer) {
         board.draw(buffer);
-        buffer.drawText(GameTime.getElapsedFormattedTime(), 220,20, Color.WHITE);
+        buffer.drawText(GameTime.getElapsedFormattedTime(), 222,20, Color.WHITE);
     }
 
     @Override
