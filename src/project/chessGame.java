@@ -9,6 +9,8 @@ import java.awt.*;
 public class chessGame extends Game {
 
     private Board board;
+    private Player whitePlayer;
+    private Player blackPlayer;
 
     public chessGame() {
         initPlayers();
@@ -17,7 +19,10 @@ public class chessGame extends Game {
 
     @Override
     public void update() {
-
+        if (Mouse.hasClicked) {
+            board.selectTile(Mouse.mouseX, Mouse.mouseY);
+            Mouse.hasClicked = false;
+        }
     }
 
     @Override
@@ -41,6 +46,7 @@ public class chessGame extends Game {
     }
 
     private void initPlayers() {
-
+        whitePlayer = new Player(1);
+        blackPlayer = new Player(0);
     }
 }

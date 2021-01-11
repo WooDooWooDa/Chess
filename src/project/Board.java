@@ -16,6 +16,23 @@ public class Board {
         initPieces();
     }
 
+    public void selectTile(int x, int y) {
+        if (tiles[x][y].isEmpty()) {
+            unSelectAll();
+            return;
+        }
+        unSelectAll();
+        tiles[x][y].select();
+    }
+
+    public void draw(Buffer buffer) {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                tiles[i][j].draw(buffer);
+            }
+        }
+    }
+
     private void initPieces() {
         for (int i = 0; i < 8; i++) {
             tiles[i][1].setPiece(new Pawn(0));
@@ -44,10 +61,12 @@ public class Board {
         }
     }
 
-    public void draw(Buffer buffer) {
+    private void unSelectAll() {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                tiles[i][j].draw(buffer);
+                if (tiles[i][j].isSelected()) {
+                    tiles[i][j].unSelect();
+                }
             }
         }
     }

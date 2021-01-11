@@ -78,6 +78,7 @@ public class RenderingEngine {
                 if (e.getButton() == MouseEvent.BUTTON1) {
                     Mouse.mouseX = e.getX() / 64;
                     Mouse.mouseY = e.getY() / 64;
+                    Mouse.hasClicked = true;
                     System.out.printf("(%d,%d)%n", Mouse.mouseX, Mouse.mouseY);
                 }
             }
